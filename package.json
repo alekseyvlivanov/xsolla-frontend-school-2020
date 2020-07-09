@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html -d docs"
+    "build": "parcel build src/index.html --out-dir docs --public-url /xsolla-frontend-school-2020 --no-content-hash"
   },
   "repository": {
     "type": "git",
