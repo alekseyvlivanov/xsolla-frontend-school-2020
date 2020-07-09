@@ -1,0 +1,24 @@
+{
+  "name": "xsolla-frontend-school-2020",
+  "version": "1.0.0",
+  "description": "Xsolla Summer School 2020 Frontend",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekseyvlivanov/xsolla-frontend-school-2020.git"
+  },
+  "author": "Aleksey Ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekseyvlivanov/xsolla-frontend-school-2020/issues"
+  },
+  "homepage": "https://github.com/alekseyvlivanov/xsolla-frontend-school-2020#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  }
+}
