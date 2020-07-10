@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Xsolla Summer School 2020 Frontend</title>
+    <!-- <link rel="stylesheet" href="select-css.css" /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,22 +18,16 @@
         <main class="main">
           <form class="filter">
             <label for="city">City:</label>
-            <select id="city">
+            <select class="form-select" id="city">
               <option selected>Choose...</option>
             </select>
             <label for="month">Month:</label>
-            <select id="month">
+            <select class="form-select" id="month">
               <option selected>Choose...</option>
             </select>
           </form>
 
-          <ul class="cards">
-            <li class="card">Card 1</li>
-            <li class="card">Card 2</li>
-            <li class="card">Card 3</li>
-            <li class="card">Card 4</li>
-            <li class="card">Card 5</li>
-          </ul>
+          <ul class="cards"></ul>
         </main>
 
         <footer class="footer">
