@@ -75,6 +75,10 @@ a {
   margin-right: 1rem;
 }
 
+.form-select:hover {
+  cursor: pointer;
+}
+
 .cards {
   display: grid;
   grid-gap: 4rem;
@@ -177,7 +181,7 @@ a {
   }
 
   .event-day {
-    visibility: hidden;
+    display: none;
   }
 
   .event-name {

@@ -20,10 +20,24 @@ const monthNames = [
 const getMonthName = (num) => monthNames[parseInt(num, 10)];
 const getMonthNumber = (str) => monthNames.findIndex(str);
 
-window.addEventListener('DOMContentLoaded', () => {
-  console.log(events);
+const selectCity = document.querySelector('#city');
+const selectMonth = document.querySelector('#month');
+const cards = document.querySelector('.cards');
 
-  const cards = document.querySelector('.cards');
+let city = 'All';
+let month = 'All';
+
+const filterEvents = (city, month) => {
+  const cardArray = document.querySelectorAll('.card');
+  cardArray.forEach((card) => {
+    const isVisible =
+      (city === 'All' || city === card.dataset.city) &&
+      (month === 'All' || month === card.dataset.month);
+    card.style.display = isVisible ? '' : 'none';
+  });
+};
+
+window.addEventListener('DOMContentLoaded', () => {
   events.forEach((event) => {
     const [day, month, year] = event.date.split('.');
 
@@ -32,6 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const card = document.createElement('li');
     card.className = 'card';
+    card.dataset.city = event.city;
+    card.dataset.month = getMonthName(month);
 
     const eventDay = document.createElement('div');
     eventDay.className = 'event-day';
@@ -53,7 +69,6 @@ window.addEventListener('DOMContentLoaded', () => {
     cards.append(card);
   });
 
-  const selectCity = document.querySelector('#city');
   Array.from(cities)
     .sort()
     .forEach((city) => {
@@ -62,7 +77,6 @@ window.addEventListener('DOMContentLoaded', () => {
       selectCity.add(option);
     });
 
-  const selectMonth = document.querySelector('#month');
   Array.from(months)
     .sort()
     .forEach((month) => {
@@ -70,4 +84,14 @@ window.addEventListener('DOMContentLoaded', () => {
       option.text = getMonthName(month);
       selectMonth.add(option);
     });
+});
+
+selectCity.addEventListener('change', (e) => {
+  city = e.target.value;
+  filterEvents(city, month);
+});
+
+selectMonth.addEventListener('change', (e) => {
+  month = e.target.value;
+  filterEvents(city, month);
 });
