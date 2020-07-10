@@ -32,13 +32,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const card = document.createElement('li');
     card.className = 'card';
-    card.innerText = `${event.date} - ${event.name} - ${event.city}`;
+
+    const eventDay = document.createElement('div');
+    eventDay.className = 'event-day';
+    eventDay.innerText = day;
+
+    const eventName = document.createElement('div');
+    eventName.className = 'event-name';
+    eventName.innerText = event.name;
 
     const bgImg = new Image();
     bgImg.onload = () => {
       card.style.backgroundImage = `url(${bgImg.src})`;
     };
     bgImg.src = event.image;
+
+    card.append(eventDay);
+    card.append(eventName);
 
     cards.append(card);
   });
