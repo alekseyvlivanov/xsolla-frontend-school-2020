@@ -61,6 +61,20 @@ a {
   padding-bottom: 2rem;
 }
 
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  width: 8rem;
+}
+
 .form-select {
   display: inline-block;
   height: 5rem;
@@ -178,6 +192,11 @@ a {
 @media (max-width: 425px) {
   .container {
     padding: 0;
+  }
+
+  .main {
+    margin-right: 1px;
+    margin-left: 1px;
   }
 
   .event-day {

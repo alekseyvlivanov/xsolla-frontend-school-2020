@@ -16,14 +16,18 @@
 
         <main class="main">
           <form class="filter">
-            <label for="city">City:</label>
-            <select class="form-select" id="city">
-              <option>All</option>
-            </select>
-            <label for="month">Month:</label>
-            <select class="form-select" id="month">
-              <option>All</option>
-            </select>
+            <div class="filter-group">
+              <label class="form-label" for="city">City:</label>
+              <select class="form-select" id="city">
+                <option>All</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="form-label" for="month">Month:</label>
+              <select class="form-select" id="month">
+                <option>All</option>
+              </select>
+            </div>
           </form>
 
           <ul class="cards"></ul>
